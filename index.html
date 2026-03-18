@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Tamal Kumar Sarker — AI/ML Engineer portfolio. Expertise in NLP, Computer Vision, LLMs, RAG, and Transformer-based architectures.">
+  <meta name="keywords" content="AI Engineer, ML Engineer, NLP, Computer Vision, LLM, Portfolio, Tamal Kumar Sarker">
+  <title>Tamal Kumar Sarker</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'></text></svg>">
+</head>
+
+<body>
+  <!-- Particle Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">TKS<span style="color:var(--accent-1)">.</span>ai</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Research</a></li>
+        <li><a href="#certifications">Certs</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
+        <button class="admin-toggle" id="adminToggle" title="Admin panel">⚙️</button>
+        <button class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Clock Widget -->
+  <div class="clock-widget" id="clockWidget">
+    <div class="clock-time" id="clockTime">00:00:00</div>
+    <div class="clock-date" id="clockDate">Loading...</div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="pulse"></span>
+        <span>Available for opportunities</span>
+      </div>
+      <h1>Hi, I'm <span class="name-gradient" id="heroName">Tamal Kumar Sarker</span></h1>
+      <p class="hero-title" id="heroTitle">AI / ML Engineer</p>
+      <div class="hero-typing">
+        <span id="typingText"></span><span class="cursor"></span>
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">🚀 View My Work</a>
+        <a href="#contact" class="btn btn-outline">📬 Get In Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number" id="statProjects">8+</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">1</div>
+          <div class="stat-label">IEEE Publication</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">1+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">3</div>
+          <div class="stat-label">Certifications</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="section-header reveal">
+      <span class="section-label">// who am i</span>
+      <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+    </div>
+    <div class="about-grid reveal">
+      <div class="about-photo-wrapper">
+        <div class="photo-placeholder" id="profilePhoto">👨‍💻</div>
+      </div>
+      <div class="about-info">
+        <h3 id="aboutName">Tamal Kumar Sarker</h3>
+        <p class="about-bio" id="aboutBio">AI Engineer experienced in developing scalable NLP, computer vision, and
+          multimodal systems using cutting-edge models and frameworks.</p>
+        <div class="about-details">
+          <div class="detail-item">
+            <span class="detail-icon">📍</span>
+            <div>
+              <div class="detail-label">Location</div>
+              <div class="detail-value" id="aboutLocation">Dhaka, Bangladesh</div>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">💼</span>
+            <div>
+              <div class="detail-label">Current Role</div>
+              <div class="detail-value">ML Engineer @ Adorsho Pranisheba</div>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">📧</span>
+            <div>
+              <div class="detail-label">Email</div>
+              <div class="detail-value" id="aboutEmail">tamalsarker534@gmail.com</div>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">🎓</span>
+            <div>
+              <div class="detail-label">Education</div>
+              <div class="detail-value">BSc CSE, UIU</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section" id="skills">
+    <div class="section-header reveal">
+      <span class="section-label">// what i know</span>
+      <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+      <p class="section-subtitle">Expertise across the full AI/ML stack — from research to production</p>
+    </div>
+    <div class="skills-grid" id="skillsGrid"></div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="section" id="experience">
+    <div class="section-header reveal">
+      <span class="section-label">// where i've worked</span>
+      <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
+    </div>
+    <div class="timeline" id="experienceTimeline"></div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects">
+    <div class="section-header reveal">
+      <span class="section-label">// what i've built</span>
+      <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      <p class="section-subtitle">From LLM fine-tuning to computer vision pipelines — real-world AI solutions</p>
+    </div>
+    <div class="project-filters" id="projectFilters"></div>
+    <div class="projects-grid" id="projectsGrid"></div>
+  </section>
+
+  <!-- ===== PUBLICATIONS ===== -->
+  <section class="section" id="publications">
+    <div class="section-header reveal">
+      <span class="section-label">// my research</span>
+      <h2 class="section-title">Research & <span class="gradient-text">Publications</span></h2>
+    </div>
+    <div id="publicationsContainer"></div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section class="section" id="certifications">
+    <div class="section-header reveal">
+      <span class="section-label">// continuous learning</span>
+      <h2 class="section-title">Certifications & <span class="gradient-text">Courses</span></h2>
+    </div>
+    <div class="certs-grid" id="certsGrid"></div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section class="section" id="education">
+    <div class="section-header reveal">
+      <span class="section-label">// academic background</span>
+      <h2 class="section-title">Education</h2>
+    </div>
+    <div id="educationContainer"></div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <div class="section-header reveal">
+      <span class="section-label">// let's connect</span>
+      <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+      <p class="section-subtitle">Feel free to reach out for collaborations, research, or opportunities</p>
+    </div>
+    <div class="contact-grid" id="contactGrid"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Designed & Built by <strong>Tamal Kumar Sarker</strong> with <span class="heart">❤</span> & AI</p>
+    <p style="margin-top:6px;font-size:0.75rem;">© 2024–2026. Powered by curiosity and caffeine.</p>
+  </footer>
+
+  <!-- AI Chatbot -->
+  <button class="ai-chat-toggle" id="aiChatToggle" title="Ask AI about me">🤖</button>
+  <div class="ai-chat-panel" id="aiChatPanel">
+    <div class="ai-chat-header">
+      <h4>🤖 Ask AI About Tamal</h4>
+      <button class="ai-chat-close" id="aiChatClose">✕</button>
+    </div>
+    <div class="ai-chat-messages" id="aiChatMessages">
+      <div class="chat-msg bot">Hi! I'm Tamal's AI assistant. Ask me anything about his skills, projects, experience, or
+        research! 🧠</div>
+    </div>
+    <div class="ai-chat-input">
+      <input type="text" id="aiChatInput" placeholder="Ask about skills, projects..." autocomplete="off">
+      <button id="aiChatSend">Send</button>
+    </div>
+  </div>
+
+  <!-- Admin Modal -->
+  <div class="admin-modal" id="adminModal">
+    <div class="admin-container">
+      <button class="admin-close" id="adminClose">✕</button>
+      <!-- Login -->
+      <div id="adminLoginView" class="admin-login">
+        <h3 style="margin-bottom:8px;font-family:'Outfit',sans-serif;font-size:1.5rem;">🔐 Admin Access</h3>
+        <p style="color:var(--text-muted);margin-bottom:24px;font-size:0.9rem;">Enter your password to manage your
+          portfolio</p>
+        <input type="password" id="adminPassword" placeholder="Enter admin password">
+        <button class="btn btn-primary" id="adminLoginBtn" style="width:100%;">Unlock</button>
+        <p id="adminLoginError" style="color:var(--accent-3);margin-top:12px;font-size:0.85rem;display:none;">Incorrect
+          password</p>
+      </div>
+      <!-- Dashboard -->
+      <div id="adminDashboard" style="display:none;">
+        <h3 class="admin-title">Dashboard</h3>
+        <div class="admin-tabs" id="adminTabs">
+          <button class="admin-tab active" data-tab="profile">Profile</button>
+          <button class="admin-tab" data-tab="projects">Projects</button>
+          <button class="admin-tab" data-tab="publications">Publications</button>
+          <button class="admin-tab" data-tab="data">Data Backup</button>
+        </div>
+        <!-- Profile Tab -->
+        <div class="admin-panel-content active" id="tab-profile">
+          <div class="form-group"><label>Full Name</label><input type="text" id="adminName"></div>
+          <div class="form-group"><label>Title</label><input type="text" id="adminTitle"></div>
+          <div class="form-group"><label>Tagline</label><input type="text" id="adminTagline"></div>
+          <div class="form-group"><label>Bio</label><textarea id="adminBio"></textarea></div>
+          <div class="form-group"><label>Email</label><input type="text" id="adminEmail"></div>
+          <div class="form-group"><label>Phone</label><input type="text" id="adminPhone"></div>
+          <div class="form-group"><label>Location</label><input type="text" id="adminLocation"></div>
+          <div class="form-group"><label>GitHub URL</label><input type="text" id="adminGithub"></div>
+          <div class="form-group"><label>LinkedIn URL</label><input type="text" id="adminLinkedin"></div>
+          <div class="form-group"><label>Profile Photo</label><input type="file" id="adminPhotoUpload"
+              accept="image/*"><small style="color:var(--text-muted)">Image will be compressed and stored in
+              localStorage</small></div>
+          <div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap;">
+            <button class="btn-sm btn-save" id="saveProfile">💾 Save Profile</button>
+            <button class="btn-sm btn-danger" id="removePhoto">🗑️ Remove Photo</button>
+          </div>
+        </div>
+        <!-- Projects Tab -->
+        <div class="admin-panel-content" id="tab-projects">
+          <div id="adminProjectsList"></div>
+          <h4 style="margin:20px 0 12px;font-family:'Outfit',sans-serif;">Add New Project</h4>
+          <div class="form-group"><label>Project Name</label><input type="text" id="newProjName"></div>
+          <div class="form-group"><label>Description</label><textarea id="newProjDesc"></textarea></div>
+          <div class="form-group"><label>Technologies (comma-separated)</label><input type="text" id="newProjTech"
+              placeholder="e.g. PyTorch, YOLO, FastAPI"></div>
+          <div class="form-group"><label>GitHub Link</label><input type="text" id="newProjGithub"></div>
+          <div class="form-group"><label>Demo Link</label><input type="text" id="newProjDemo"></div>
+          <div class="form-group"><label>Project Image</label><input type="file" id="newProjImage" accept="image/*">
+          </div>
+          <button class="btn-sm btn-save" id="addProject">➕ Add Project</button>
+        </div>
+        <!-- Publications Tab -->
+        <div class="admin-panel-content" id="tab-publications">
+          <div id="adminPubsList"></div>
+          <h4 style="margin:20px 0 12px;font-family:'Outfit',sans-serif;">Add Publication</h4>
+          <div class="form-group"><label>Title</label><input type="text" id="newPubTitle"></div>
+          <div class="form-group"><label>Authors</label><input type="text" id="newPubAuthors"></div>
+          <div class="form-group"><label>Venue / Conference</label><input type="text" id="newPubVenue"></div>
+          <div class="form-group"><label>Year</label><input type="text" id="newPubYear"></div>
+          <div class="form-group"><label>Description</label><textarea id="newPubDescription"></textarea></div>
+          <div class="form-group"><label>Link</label><input type="text" id="newPubLink"></div>
+          <div class="form-group"><label>Status</label><input type="text" id="newPubStatus"
+              placeholder="e.g. Accepted, Published"></div>
+          <button class="btn-sm btn-save" id="addPub">➕ Add Publication</button>
+        </div>
+        <!-- Data Tab -->
+        <div class="admin-panel-content" id="tab-data">
+          <h4 style="font-family:'Outfit',sans-serif;margin-bottom:12px;">🤖 OpenAI API Key</h4>
+          <p style="color:var(--text-secondary);margin-bottom:12px;font-size:0.88rem;">Your API key is stored only in
+            your browser's localStorage — never in the source code. Safe for GitHub deployment.</p>
+          <div class="form-group">
+            <input type="password" id="adminApiKey" placeholder="sk-proj-...">
+          </div>
+          <button class="btn-sm btn-save" id="saveApiKey" style="margin-bottom:30px;">🔑 Save API Key</button>
+
+          <h4 style="font-family:'Outfit',sans-serif;margin-bottom:12px;">💾 Data Backup</h4>
+          <p style="color:var(--text-secondary);margin-bottom:20px;font-size:0.88rem;">Export all your portfolio data as
+            JSON or import a previously exported backup.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <button class="btn-sm btn-save" id="exportData">📥 Export All Data</button>
+            <label class="btn-sm btn-save" style="cursor:pointer;">📤 Import Data <input type="file" id="importData"
+                accept=".json" style="display:none;"></label>
+            <button class="btn-sm btn-danger" id="resetData">🗑️ Reset to Defaults</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase SDKs (Compat version for non-module standard JS) -->
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/admin.js"></script>
+  <script src="js/ai.js"></script>
+</body>
+
+</html>
